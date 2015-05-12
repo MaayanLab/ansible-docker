@@ -2,3 +2,15 @@
 - name: Install Debian Docker
   shell: curl -sSL https://get.docker.io/ubuntu/ | sudo sh
   sudo: yes
+
+- name: Adjust memory and swap accounting
+  lineinfile: dest=/etc/default/grub regexp='^GRUB_CMDLINE_LINUX=' line='GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"'
+  tags:
+    - grub
+  notify: 
+    - update grub
+
+
+
+
+
