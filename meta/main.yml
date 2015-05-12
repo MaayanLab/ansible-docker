@@ -1,15 +1,9 @@
 ---
 galaxy_info:
-  author: Michael Hamrah
-  description: Installs docker on Ubuntu and EL systems
-  # Some suggested licenses:
-  # - BSD (default)
-  # - MIT
-  # - GPLv2
-  # - GPLv3
-  # - Apache
-  # - CC-BY
-  license: MIT
+  author: Jason Giedymin
+  description: Ansible Docker Playbook Role
+  company: http://jasongiedymin.com
+  license: Apache 2
   min_ansible_version: 1.2
   #
   # Below are all platforms currently available. Just uncomment
@@ -17,12 +11,11 @@ galaxy_info:
   # platform on this list, let us know and we'll get it added!
   #
   platforms:
-  - name: EL
-    versions:
+  #- name: EL
+  #  versions:
   #  - all
   #  - 5
-    - 6
-  #  - 7
+  #  - 6
   #- name: GenericUNIX
   #  versions:
   #  - all
@@ -43,11 +36,6 @@ galaxy_info:
   #  - 12.3
   #  - 13.1
   #  - 13.2
-  #- name: Amazon
-  #  versions:
-  #  - all
-  #  - 2013.03
-  #  - 2013.09
   #- name: GenericBSD
   #  versions:
   #  - all
@@ -66,16 +54,16 @@ galaxy_info:
   #  - 9.2
   - name: Ubuntu
     versions:
-  #  - all
-  #  - lucid
-  #  - maverick
-  #  - natty
-  #  - oneiric
-  #  - precise
-  #  - quantal
-  #  - raring
-    - saucy
-    - trusty
+      - all
+      - lucid
+      - maverick
+      - natty
+      - oneiric
+      - precise
+      - quantal
+      - raring
+      - saucy
+      - trusty
   #- name: SLES
   #  versions:
   #  - all
@@ -89,14 +77,14 @@ galaxy_info:
   #  versions:
   #  - all
   #  - any
-  #- name: Debian
-  #  versions:
-  #  - all
-  #  - etch
-  #  - lenny
-  #  - squeeze
-  #  - wheezy
-  #
+  - name: Debian
+    versions:
+      - all
+      - etch
+      - lenny
+      - squeeze
+      - wheezy
+
   # Below are all categories currently available. Just as with
   # the platforms above, uncomment those that apply to your role.
   #
@@ -105,7 +93,6 @@ galaxy_info:
   #- cloud:ec2
   #- cloud:gce
   #- cloud:rax
-  #- clustering
   #- database
   #- database:nosql
   #- database:sql
@@ -115,6 +102,7 @@ galaxy_info:
   #- packaging
   - system
   #- web
+  - platform
 dependencies: []
   # List your role dependencies here, one per line. Only
   # dependencies available via galaxy should be listed here.
